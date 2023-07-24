@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Edit Blog</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Edit Blog</h1>
+        <form action="/user/update-record" method="post">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" name="title" value="<%= blog.test_record_title %>"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="content">Subtitle</label>
+                <textarea class="form-control" id="subtitle" name="subtitle" rows="6"
+                    required><%= blog.test_record_subtitle %></textarea>
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" id="content" name="content" rows="6"
+                    required><%=  blog.test_record_content  %></textarea>
+            </div>
+            <input type="hidden" name="id" value="<%= blog.test_record_id %>">
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+        <a href="/user/home">
+            <button class="btn btn-primary">Back</button></a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (optional, if you need JS functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

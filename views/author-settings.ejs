@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Author Settings</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1> Settings</h1>
+        <form action="/user/settings" method="post">
+            <div class="form-group">
+                <label for="authorName">Author Name</label>
+                <input type="text" class="form-control" id="updateUsername" name="updateUsername" value="<%= user.test_name %>" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="updatePassword" name="updatePassword" required>
+            </div>
+            <input type="hidden" class="form-control" id="username" name="username" value="<%= user.test_name %>" required>
+            <input type="hidden" class="form-control" id="password" name="passwword" value="<%= user.test_password %>" required>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+        </form>
+        <a href="/user/home">
+            <button class="btn btn-primary">Back</button></a>
+    </div>
+
+    <!-- Bootstrap JS and jQuery (optional, if you need JS functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
